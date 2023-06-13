@@ -1,1 +1,16 @@
 RestClients:
+  #Threema Work API is designed to let 3rd-party applications communicate with Threema Work subscriptions.
+  # *
+  # * All requests are authenticated using an `X-API-Key` which can be obtained from your management cockpit.
+  # *
+  # * An `X-API-Key` HTTP header must be sent to indicate which API key is to be used with the request.
+  # *
+  # * The API key must match the remote IP (if specified for the given API key) of the connected HTTP client.
+  threema-work (Threema Work API):
+    UUID: a21a7ed8-f26d-44be-890e-44f3b17a8ac8
+    Url: https://work.threema.ch/api/v1/
+    Features:
+    - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
+    OpenAPI:
+      SpecUrl: file:///home/rew/Downloads/threema-work.json
+      Namespace: ch.threema.work.api.v1.client
