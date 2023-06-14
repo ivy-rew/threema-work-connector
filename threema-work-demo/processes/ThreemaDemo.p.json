@@ -1,0 +1,41 @@
+{
+  "format" : "10.0.0",
+  "id" : "188B52F064083FB8",
+  "config" : {
+    "data" : "com.axonivy.connector.threema.work.demo.Data"
+  },
+  "elements" : [ {
+      "id" : "f0",
+      "type" : "RequestStart",
+      "name" : "start.ivp",
+      "config" : {
+        "callSignature" : "start",
+        "outLink" : "start.ivp",
+        "tags" : "demo"
+      },
+      "visual" : {
+        "at" : { "x" : 96, "y" : 64 }
+      },
+      "connect" : { "id" : "f4", "to" : "f3" }
+    }, {
+      "id" : "f1",
+      "type" : "TaskEnd",
+      "visual" : {
+        "at" : { "x" : 352, "y" : 64 }
+      }
+    }, {
+      "id" : "f3",
+      "type" : "RestClientCall",
+      "config" : {
+        "path" : "/contacts",
+        "clientId" : "a21a7ed8-f26d-44be-890e-44f3b17a8ac8",
+        "clientErrorCode" : "ivy:error:rest:client",
+        "statusErrorCode" : "ivy:error:rest:client",
+        "resultType" : "ch.threema.work.api.v1.client.ContactIndex"
+      },
+      "visual" : {
+        "at" : { "x" : 224, "y" : 64 }
+      },
+      "connect" : { "id" : "f2", "to" : "f1" }
+    } ]
+}

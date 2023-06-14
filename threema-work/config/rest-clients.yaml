@@ -9,6 +9,7 @@ RestClients:
   threema-work (Threema Work API):
     UUID: a21a7ed8-f26d-44be-890e-44f3b17a8ac8
     Url: https://work.threema.ch/api/v1/
+    Icon: res:/webContent/logo/threema_work_32.png
     Features:
     - ch.ivyteam.ivy.rest.client.mapper.JsonFeature
     - com.axonivy.connector.threema.ThreemaAuthFeature

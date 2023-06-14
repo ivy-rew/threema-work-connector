@@ -1,4 +1,4 @@
 Variables:
   threema-work-connector:
     #[password]
-    apiKey: 'notMyKey'
+    apiKey: ''
